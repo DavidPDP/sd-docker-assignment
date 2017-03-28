@@ -6,6 +6,8 @@
 Primero se procederá a crear el mirror, este se encontrará en una máquina virtual, que se creará con el Vagrantfile. Una vez se levanta la máquina se procede a correr los siguientes comandos para crear el mirror.
 
 ## Crear Una Máquina Virtual Para El Mirror
+Se creo la máquina virtual con el siguiente archivo.
+<a href=""><b>Vista del VagrantFile</b></a>
 
 ## Configurar El Mirror
 El primer comando se encarga de generar la llave y el segundo de generar la entropía para la llave.

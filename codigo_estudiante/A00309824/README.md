@@ -16,7 +16,10 @@ Importar Keyring
 ```
 Procedemos ahora a instalar la herramienta Aptly.
 
-Agregamos la siguiente línea al repositorio. deb http://repo.aptly.info/ squeeze main
+Agregamos la siguiente línea al repositorio. 
+```txt
+deb http://repo.aptly.info/ squeeze main
+```
 ```sh
 # vi /etc/apt/sources.list
 ```

@@ -14,6 +14,13 @@ Importar Keyring
 ```sh
 # gpg --no-default-keyring --keyring /usr/share/keyrings/ubuntu-archive-keyring.gpg --export | gpg --no-default-keyring --keyring trustedkeys.gpg --import
 ```
+Procedemos ahora a instalar la herramienta Aptly.
 
+Agregamos la siguiente línea al repositorio. deb http://repo.aptly.info/ squeeze main
+```sh
+# vi /etc/apt/sources.list
+```
+
+sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 9E3E53F19C7DE460
 
 

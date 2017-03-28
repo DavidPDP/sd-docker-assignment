@@ -5,6 +5,9 @@
 
 Primero se procederá a crear el mirror, este se encontrará en una máquina virtual, que se creará con el Vagrantfile. Una vez se levanta la máquina se procede a correr los siguientes comandos para crear el mirror.
 
+## Crear Una Máquina Virtual Para El Mirror
+
+## Configurar El Mirror
 El primer comando se encarga de generar la llave y el segundo de generar la entropía para la llave.
 ```sh
 # gpg --gen-key
@@ -14,6 +17,7 @@ Importar Keyring
 ```sh
 # gpg --no-default-keyring --keyring /usr/share/keyrings/ubuntu-archive-keyring.gpg --export | gpg --no-default-keyring --keyring trustedkeys.gpg --import
 ```
+### Instalar Aptly
 Procedemos ahora a instalar la herramienta Aptly.
 
 Agregamos la siguiente línea al repositorio. 
@@ -32,6 +36,7 @@ Finalmente actualizamos e instalamos aptly.
 # apt-get update
 # apt-get install aptly
 ```
+### Descargar y Actualizar Paquetes Al Mirror
 Una vez ya tenemos aptly instalado procedemos a instalar los paquetes que necesitamos, en este caso el de postgresql.
 ```sh
 # aptly mirror create -architectures=amd64 -filter='Priority (required) | Priority (important) | Priority (standard) | postgresql' -filter-with-deps xenial-main-postgresql http://mirror.upb.edu.co/ubuntu/ xenial main
@@ -40,6 +45,7 @@ Ahora procedemos actualizar el mirror.
 ```sh
 # aptly mirror update xenial-main-postgresql
 ```
+
 
 
 

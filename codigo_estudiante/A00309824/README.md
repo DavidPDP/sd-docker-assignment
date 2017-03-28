@@ -23,9 +23,11 @@ deb http://repo.aptly.info/ squeeze main
 ```sh
 # vi /etc/apt/sources.list
 ```
+Importamos la llave del servidor de Aptly para poder descargarlo.
 ```sh
 # sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 9E3E53F19C7DE460
 ```
+Finalmente actualizamos e instalamos aptly.
 ```sh
 # apt-get update
 # apt-get install aptly
@@ -34,9 +36,11 @@ Una vez ya tenemos aptly instalado procedemos a instalar los paquetes que necesi
 ```sh
 # aptly mirror create -architectures=amd64 -filter='Priority (required) | Priority (important) | Priority (standard) | postgresql' -filter-with-deps xenial-main-postgresql http://mirror.upb.edu.co/ubuntu/ xenial main
 ```
+Ahora procedemos actualizar el mirror.
 ```sh
 # aptly mirror update xenial-main-postgresql
 ```
+
 
 
 

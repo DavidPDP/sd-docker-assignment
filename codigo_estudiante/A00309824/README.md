@@ -7,6 +7,7 @@ Primero se procederá a crear el mirror, este se encontrará en una máquina vir
 
 ## Crear Una Máquina Virtual Para El Mirror
 Se creo la máquina virtual con el siguiente archivo.
+
 <a href=""><b>Vista del VagrantFile</b></a>
 
 ## Configurar El Mirror

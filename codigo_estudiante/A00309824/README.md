@@ -48,6 +48,17 @@ Ahora procedemos actualizar el mirror.
 ```sh
 # aptly mirror update xenial-main-postgresql
 ```
+aptly snapshot create xenial-snapshot-postgresql from mirror xenial-main-postgresql
+
+aptly publish snapshot xenial-snapshot-postgresql
+
+gpg --export --armor > my_key.pub
+
+scp vagrant@ip_solo_anfitrion:/tmp/my_key.pub .
+
+
+
+
 
 
 

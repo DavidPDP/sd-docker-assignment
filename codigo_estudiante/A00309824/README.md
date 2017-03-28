@@ -8,7 +8,7 @@ Primero se procederá a crear el mirror, este se encontrará en una máquina vir
 ## Crear Una Máquina Virtual Para El Mirror
 Se creo la máquina virtual con el siguiente archivo.
 
-<a href=""><b>Vista del VagrantFile</b></a>
+<a href="https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/Vagrantfile"><b>Vista del VagrantFile</b></a>
 
 ## Configurar El Mirror
 El primer comando se encarga de generar la llave y el segundo de generar la entropía para la llave.

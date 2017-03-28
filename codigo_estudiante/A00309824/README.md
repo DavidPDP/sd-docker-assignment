@@ -20,7 +20,23 @@ Agregamos la siguiente línea al repositorio. deb http://repo.aptly.info/ squeez
 ```sh
 # vi /etc/apt/sources.list
 ```
+```sh
+# sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 9E3E53F19C7DE460
+```
+```sh
+# apt-get update
+# apt-get install aptly
+```
+Una vez ya tenemos aptly instalado procedemos a instalar los paquetes que necesitamos, en este caso el de postgresql.
+```sh
+# aptly mirror create -architectures=amd64 -filter='Priority (required) | Priority (important) | Priority (standard) | postgresql' -filter-with-deps xenial-main-postgresql http://mirror.upb.edu.co/ubuntu/ xenial main
+```
+```sh
+# aptly mirror update xenial-main-postgresql
+```
 
-sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 9E3E53F19C7DE460
+
+
+
 
 

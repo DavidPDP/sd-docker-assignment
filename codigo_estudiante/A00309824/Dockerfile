@@ -13,6 +13,6 @@ RUN apt-get clean && \
     apt-get update -y && \
     apt-get install postgresql -y
 
-EXPOSE 5000
+EXPOSE 5432
 
-CMD postgresql -m http.server 5000 
+CMD postgresql -m http.server 5432

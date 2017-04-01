@@ -10,7 +10,7 @@
 Primero se procederá a crear el mirror, este se encontrará en una máquina virtual, que se creará con un Vagrantfile. Una vez se levanta la máquina se procede a correr los siguientes comandos para crear y configurar el mirror.
 
 ## Crear Una Máquina Virtual Para El Mirror
-Para crear la máquina virtual se utilizó el siguiente archivo.
+Para crear la máquina virtual se utilizará el siguiente archivo.
 
 <a href="https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/Vagrantfile"><b>Vista del VagrantFile</b></a>
 

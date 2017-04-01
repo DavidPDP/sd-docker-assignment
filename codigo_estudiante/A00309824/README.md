@@ -153,3 +153,10 @@ INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (2, 'Roger', 44, 'Portad
 SELECT ID, NAME, SALARY FROM COMPANY;
 ```
 ![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
+
+## Exportar Contenedor A Imagen
+Finalmente se procede a guardar el contenedor como una imagen para poderlo utilizarlo posteriormente.
+```sh
+docker commit id_contenedor ubuntu_postgresql_update
+```
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)

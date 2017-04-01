@@ -98,16 +98,53 @@ $ psql --version
 ![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
 
 
+## Utilizando Postgresql
+Ya con el contenedor arriba haremos uso del servicio Postgresql. Para esto primero lo activaremos.
+```sh
+$ /etc/init.d/postgresql start
+```
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
 
+### Crear Base De Datos
+```psql
+CREATE DATABASE dbTest;
+```
+Confirmamos que se haya creado correctamente.
+```psql
+\l
+```
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
 
+### Conexión Base De Datos
+```psql
+\c dbtest;
+```
+### Creación Tabla
+```psql
+CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+```
+Comprobar que la tabla se creó correctamente.
+```psql
+\d company
+```
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
 
+### Insertar Datos
+```psql
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (1, 'Paul', 32, 'California', 20000.00);
 
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (2, 'Roger', 44, 'Portador', 50000.00);
+```
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
 
-
-
-
-
-
-
-
-
+### Consulta A La Tabla
+```psql
+SELECT ID, NAME, SALARY FROM COMPANY;
+```
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)

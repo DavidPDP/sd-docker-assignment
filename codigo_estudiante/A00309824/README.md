@@ -70,9 +70,11 @@ Por último iniciamos el mirror.
 $ aptly serve
 ```
 ## Crear El Contenedor Con Docker 
-Ya se tiene el mirror con los paquetes que necesitamos, ahora procedemos a crear el contenedor virtual apuntando al mirror para descargar Postgresql. Para esto creamos un Dockerfile.
+Ya se tiene el mirror con los paquetes que necesitamos, ahora procedemos a crear el contenedor virtual apuntando al mirror para descargar Postgresql. Para esto creamos un Dockerfile. Podemos observar en la imagen como suceden los pasos.
 
-<a href="https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/Vagrantfile"><b>Dockerfile Utilizado</b></a>
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/docker-stages.png)
+
+<a href="https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/Dockerfile"><b>Dockerfile Utilizado</b></a>
 
 ### Construir La Imagen
 Construimos la imagen con el siguiente comando asignado un nombre y una versión.
@@ -93,7 +95,7 @@ Estando en el bash del contenedor verificamos que efectivamente instaló Postgre
 ```sh
 $ psql --version
 ```
-![alt text](https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/images/tree.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
 
 
 

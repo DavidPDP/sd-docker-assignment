@@ -29,7 +29,7 @@ Procedemos ahora a instalar la herramienta Aptly, una herramienta que permite la
 
 Agregamos el repositorio de Aptly al archivo sources list, que es el archivo donde Apt guarda la lista de repositorios o canales de software, para esto empleamos el siguiente comando.
 ```sh
-echo deb http://repo.aptly.info/ squeeze main > /etc/apt/sources.list
+$ echo deb http://repo.aptly.info/ squeeze main > /etc/apt/sources.list
 ```
 Importamos la llave del servidor de Aptly para poder descargarlo.
 ```sh

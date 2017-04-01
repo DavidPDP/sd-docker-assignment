@@ -105,6 +105,11 @@ $ /etc/init.d/postgresql start
 ```
 ![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
 
+Seguimos cambiando al usuario postgres y abriendo la consola de Postgresql.
+```sh
+$ su - postgres
+$ psql
+```
 ### Crear Base De Datos
 ```psql
 CREATE DATABASE dbTest;

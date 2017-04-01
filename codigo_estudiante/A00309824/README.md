@@ -1,6 +1,6 @@
 # Docker-Mirror
 <b>Autores:</b> Dylan Torres y Johan David Ballesteros <br>
-<b>Códigos:</b>A00265772 - A00309824<br>
+<b>Códigos:</b> A00265772 - A00309824<br>
 <b>Repositorio:</b> https://github.com/DavidPDP/sd-docker-assignment/tree/master/codigo_estudiante/A00309824
 
 ## Objetivo

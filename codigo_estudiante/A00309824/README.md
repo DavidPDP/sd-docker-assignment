@@ -1,17 +1,21 @@
 # Docker-Mirror
-<b>Autor:</b> Johan David Ballesteros <br>
-<b>Código:</b>A00309824<br>
+<b>Autores:</b> Dylan Torres y Johan David Ballesteros <br>
+<b>Códigos:</b>A00265772 - A00309824<br>
 <b>Repositorio:</b> https://github.com/DavidPDP/sd-docker-assignment/tree/master/codigo_estudiante/A00309824
 
-Primero se procederá a crear el mirror, este se encontrará en una máquina virtual, que se creará con el Vagrantfile. Una vez se levanta la máquina se procede a correr los siguientes comandos para crear el mirror.
+## Objetivo
+* Crear un mirror que contenga los archivos de Postgresql.
+* Levantar un contenedor que descargue Postgresql desde el mirror creado.
+
+Primero se procederá a crear el mirror, este se encontrará en una máquina virtual, que se creará con un Vagrantfile. Una vez se levanta la máquina se procede a correr los siguientes comandos para crear y configurar el mirror.
 
 ## Crear Una Máquina Virtual Para El Mirror
-Se creo la máquina virtual con el siguiente archivo.
+Para crear la máquina virtual se utilizó el siguiente archivo.
 
 <a href="https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/Vagrantfile"><b>Vista del VagrantFile</b></a>
 
 ## Configurar El Mirror
-El primer comando se encarga de generar la llave y el segundo de generar la entropía para la llave.
+Para configurar el mirror empezamos generando una llave, que nos permitirá una transmisión de datos de manera segura e incriptada. El primer comando se encarga de generar la llave y el segundo de generar la entropía para la llave.
 ```sh
 $ gpg --gen-key
 $ cat /dev/urandom

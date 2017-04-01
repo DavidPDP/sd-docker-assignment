@@ -45,17 +45,58 @@ Una vez ya tenemos Aptly instalado, procedemos a crear el mirror descargando los
 ```sh
 $ aptly mirror create -architectures=amd64 -filter='Priority (required) | Priority (important) | Priority (standard) | postgresql' -filter-with-deps xenial-main-postgresql http://mirror.upb.edu.co/ubuntu/ xenial main
 ```
-Ahora actualizamos el mirror.
+Ahora actualizamos el mirror, para que pueda correr la configuración anterior y descargar lo indicado.
 ```sh
 $ aptly mirror update xenial-main-postgresql
 ```
-aptly snapshot create xenial-snapshot-postgresql from mirror xenial-main-postgresql
+### Exponer Paquetes
+Para poder exponer los paquetes y que puedan ser descargados desde otras máquinas crearemos un snapshot. 
+```sh
+$ aptly snapshot create xenial-snapshot-postgresql from mirror xenial-main-postgresql
+```
+Una vez creado lo publicamos.
+```sh
+$ aptly publish snapshot xenial-snapshot-postgresql
+```
+Ahora exportamos la llave que creamos a la máquina que va a emplear el mirror.
+```sh
+$ gpg --export --armor > my_key.pub
+```
+```sh
+$ scp vagrant@192.168.131.3:/tmp/my_key.pub .
+```
+Por último iniciamos el mirror.
+```sh
+$ aptly serve
+```
+## Crear El Contenedor Con Docker 
+Ya se tiene el mirror con los paquetes que necesitamos, ahora procedemos a crear el contenedor virtual apuntando al mirror para descargar Postgresql. Para esto creamos un Dockerfile.
 
-aptly publish snapshot xenial-snapshot-postgresql
+<a href="https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/Vagrantfile"><b>Dockerfile Utilizado</b></a>
 
-gpg --export --armor > my_key.pub
+### Construir La Imagen
+Construimos la imagen con el siguiente comando asignado un nombre y una versión.
+```sh
+$ docker build -t ubuntu_postgresql:0.0.1 .
+```
+Comprobamos que no halla ningún error y verificamos que haya quedado registrado en la imagenes de Docker.
+```sh
+$ docker images
+```
+### Crear Contenedor Desde La Imagen
+Ya teniendo la imagen procedemos a levantar el contenedor virtual con el siguiente comando, que nos permite también abrir el bash del contenedor creado.
+```sh
+$ docker run -it --rm ubuntu_postgresql:0.0.1 /bin/bash
+```
+### Verificar Instalación De Postgresql
+Estando en el bash del contenedor verificamos que efectivamente instaló Postgresql.
+```sh
+$ psql --version
+```
+![alt text](https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/images/tree.png)
 
-scp vagrant@ip_solo_anfitrion:/tmp/my_key.pub .
+
+
 
 
 

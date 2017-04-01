@@ -25,30 +25,27 @@ Importar Keyring
 $ gpg --no-default-keyring --keyring /usr/share/keyrings/ubuntu-archive-keyring.gpg --export | gpg --no-default-keyring --keyring trustedkeys.gpg --import
 ```
 ### Instalar Aptly
-Procedemos ahora a instalar la herramienta Aptly.
+Procedemos ahora a instalar la herramienta Aptly, una herramienta que permite la administración de repositorios Debian, reflejar repositorios remotos y crear snapshots.
 
-Agregamos la siguiente línea al repositorio. 
-```txt
-deb http://repo.aptly.info/ squeeze main
-```
+Agregamos el repositorio de Aptly al archivo sources list, que es el archivo donde Apt guarda la lista de repositorios o canales de software, para esto empleamos el siguiente comando.
 ```sh
-# vi /etc/apt/sources.list
+echo deb http://repo.aptly.info/ squeeze main > /etc/apt/sources.list
 ```
 Importamos la llave del servidor de Aptly para poder descargarlo.
 ```sh
 $ sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 9E3E53F19C7DE460
 ```
-Finalmente actualizamos e instalamos aptly.
+Finalmente actualizamos Apt e instalamos Aptly.
 ```sh
 # apt-get update
 # apt-get install aptly
 ```
 ### Descargar y Actualizar Paquetes Al Mirror
-Una vez ya tenemos aptly instalado procedemos a instalar los paquetes que necesitamos, en este caso el de postgresql.
+Una vez ya tenemos Aptly instalado, procedemos a crear el mirror descargando los paquetes que necesitamos, en este caso el de postgresql.
 ```sh
 $ aptly mirror create -architectures=amd64 -filter='Priority (required) | Priority (important) | Priority (standard) | postgresql' -filter-with-deps xenial-main-postgresql http://mirror.upb.edu.co/ubuntu/ xenial main
 ```
-Ahora procedemos actualizar el mirror.
+Ahora actualizamos el mirror.
 ```sh
 $ aptly mirror update xenial-main-postgresql
 ```

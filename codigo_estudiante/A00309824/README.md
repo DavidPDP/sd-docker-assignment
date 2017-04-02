@@ -161,7 +161,7 @@ SELECT ID, NAME, SALARY FROM COMPANY;
 ## Exportar Contenedor A Imagen
 Finalmente se procede a guardar el contenedor como una imagen para poderlo utilizarlo posteriormente.
 ```sh
-docker commit id_contenedor ubuntu_postgresql_update
+$ docker commit id_contenedor ubuntu_postgresql_update
 ```
 ![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura10.png)
 

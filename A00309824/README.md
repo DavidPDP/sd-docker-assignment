@@ -72,7 +72,7 @@ $ aptly serve
 ## Crear El Contenedor Con Docker 
 Ya se tiene el mirror con los paquetes que necesitamos, ahora procedemos a crear el contenedor virtual apuntando al mirror para descargar Postgresql. Para esto creamos un Dockerfile. Podemos observar en la imagen como suceden los pasos.
 
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/docker-stages.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/A00309824/images/docker-stages.png)
 
 <a href="https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/Dockerfile"><b>Dockerfile Utilizado</b></a>
 

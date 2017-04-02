@@ -148,7 +148,9 @@ INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (1, 'Paul', 32, 'Califor
 
 INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (2, 'Roger', 44, 'Portador', 50000.00);
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura5.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura11.png)
+
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura12.png)
 
 ### Consulta A La Tabla
 ```psql

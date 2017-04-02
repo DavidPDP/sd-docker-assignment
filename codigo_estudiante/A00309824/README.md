@@ -118,12 +118,14 @@ Confirmamos que se haya creado correctamente.
 ```psql
 \l
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura2.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura5.png)
 
 ### Conexión Base De Datos
 ```psql
 \c dbtest;
 ```
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura6.png)
+
 ### Creación Tabla
 ```psql
 CREATE TABLE COMPANY(
@@ -138,7 +140,7 @@ Comprobar que la tabla se creó correctamente.
 ```psql
 \d company
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura4.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura8.png)
 
 ### Insertar Datos
 ```psql
@@ -152,18 +154,15 @@ INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (2, 'Roger', 44, 'Portad
 ```psql
 SELECT ID, NAME, SALARY FROM COMPANY;
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura6.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura7.png)
 
 ## Exportar Contenedor A Imagen
 Finalmente se procede a guardar el contenedor como una imagen para poderlo utilizarlo posteriormente.
 ```sh
 docker commit id_contenedor ubuntu_postgresql_update
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura7.png)
-
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura8.png)
-
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura9.png)
-
 ![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura10.png)
 
+Comprobamos que efectivamente se creo la imagen.
+
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura9.png)

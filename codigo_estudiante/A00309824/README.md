@@ -103,7 +103,7 @@ Ya con el contenedor arriba haremos uso del servicio Postgresql. Para esto prime
 ```sh
 $ /etc/init.d/postgresql start
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura2.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura3.png)
 
 Seguimos cambiando al usuario postgres y abriendo la consola de Postgresql.
 ```sh
@@ -118,7 +118,7 @@ Confirmamos que se haya creado correctamente.
 ```psql
 \l
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura3.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura2.png)
 
 ### Conexión Base De Datos
 ```psql

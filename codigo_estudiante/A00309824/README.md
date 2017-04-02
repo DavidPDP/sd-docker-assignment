@@ -103,7 +103,7 @@ Ya con el contenedor arriba haremos uso del servicio Postgresql. Para esto prime
 ```sh
 $ /etc/init.d/postgresql start
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura2.png)
 
 Seguimos cambiando al usuario postgres y abriendo la consola de Postgresql.
 ```sh
@@ -118,7 +118,7 @@ Confirmamos que se haya creado correctamente.
 ```psql
 \l
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura3.png)
 
 ### Conexión Base De Datos
 ```psql
@@ -138,7 +138,7 @@ Comprobar que la tabla se creó correctamente.
 ```psql
 \d company
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura4.png)
 
 ### Insertar Datos
 ```psql
@@ -146,17 +146,24 @@ INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (1, 'Paul', 32, 'Califor
 
 INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (2, 'Roger', 44, 'Portador', 50000.00);
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura5.png)
 
 ### Consulta A La Tabla
 ```psql
 SELECT ID, NAME, SALARY FROM COMPANY;
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura6.png)
 
 ## Exportar Contenedor A Imagen
 Finalmente se procede a guardar el contenedor como una imagen para poderlo utilizarlo posteriormente.
 ```sh
 docker commit id_contenedor ubuntu_postgresql_update
 ```
-![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura1.png)
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura7.png)
+
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura8.png)
+
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura9.png)
+
+![alt text](https://github.com/DavidPDP/sd-docker-assignment/blob/master/codigo_estudiante/A00309824/images/captura10.png)
+
